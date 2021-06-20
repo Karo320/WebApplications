@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title= title
+
+    //- Setup for bootstrap
+    meta(charset, 'utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    //- Nocache
+    meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate')
+    meta(http-equiv='Pragma', content='no-cache')
+    meta(http-equiv='Expires', content='0')
+
+    //- Jquery  
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+
+    //- Bootstrap
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+
+    //- Our Style Sheet
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body(class='container-fluid')
+
+    nav.navbar.navbar-light.bg-light
+      a.navbar-brand(href='/')
+        img.d-inline-block.align-top(src='/images/blizkrieglogo300.png' width='30' height='30' alt='')
+        |     NodeJS + Express + PUG
+
+    block content
+
+    block foot
+      #footer
+        footer.footer
+          .container
+            span.text-muted (c) 2018-2020 Blitzkrieg Software, MIT License

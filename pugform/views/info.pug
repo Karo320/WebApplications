@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+
+  if errors.length > 0
+    div(class='card card-body bump-down')
+      h5(class='card-title') Form Errors
+      div(class='card-text')
+      ul
+        each e in errors
+          li= e
+
+  p.bump-down 
+  |
+
+  table.table.table-condensed.table-bordered
+    tr
+      th(class='text-left')
+        | form element
+      th(class='text-left')
+        | value
+    tr
+      td(class='text-left')
+        | E-mail
+      td(class='text-left')= data.email
+    tr
+      td(class='text-left')
+        | Password
+      td(class='text-left')= data.password
+    tr
+      td(class='text-left')
+        | Remember Me
+      td(class='text-left')= data.rememberme
